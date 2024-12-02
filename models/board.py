@@ -6,6 +6,13 @@ class Board:
         """
         Draw the board of Tic-Tac-Toe game
         """
+        for row in range(len(self.grid)):
+            print(" ---" * len(self.grid[row]))
+            row_content = "|"
+            for col in range(len(self.grid[row])):
+                row_content += " " + self.grid[row][col] + " |"
+            print(row_content)
+        print(" ---" * len(self.grid[row]))
 
     def update_board(self, row: int, col: int, symbol: str) -> bool:
         """
